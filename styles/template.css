@@ -1,3 +1,32 @@
 #form {
     border: solid 1px black;
 }
+
+
+
+            #result {
+                font-size: 14pt;
+                height: 18pt;
+                color: red;
+                font-weight: bold;
+            }
+            table {
+                border-collapse: collapse;
+                width: 80%;
+                background-color: cornsilk;
+                margin:auto;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                color:darkturquoise;
+                font-size: 15pt;
+            }
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }

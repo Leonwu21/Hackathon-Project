@@ -6,118 +6,150 @@ HTML for creating a group form-->
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!---->
-    <!--FIREBASE LIBRARY-->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <!------------------------------------------------------>
+    <head>
+        <!---->
+        <!--FIREBASE LIBRARY-->
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <!------------------------------------------------------>
 
-    <!--jQuery library, used to manipulate HTML elements with javascript-->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <!------------------------------------------------------->
-
-
-
-    <meta charset="utf-8">
-    <title>Create a Group</title>
+        <!--jQuery library, used to manipulate HTML elements with javascript-->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <!------------------------------------------------------->
 
 
-    <script>
-     var firebaseConfig = {
-         
+
+        <meta charset="utf-8">
+        <title>Buildings</title>
+
+
+
+
+        <script>
+            var firebaseConfig = {
+
                 apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
-                authDomain: "studybuddy-ce7e9.firebaseapp.com",
-                databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
-                projectId: "studybuddy-ce7e9",
-                storageBucket: "studybuddy-ce7e9.appspot.com",
-                messagingSenderId: "288586368350",
-                appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
-                measurementId: "G-VYXB59FGNZ"
+                authDomain: "hackathon-project-7160d.firebaseapp.com",
+                databaseURL: "https://hackathon-project-7160d.firebaseio.com",
+                projectId: "hackathon-project-7160d",
+                storageBucket: "hackathon-project-7160d.appspot.com",
+                messagingSenderId: "808375394593",
+                appId: "1:808375394593:web:4615ca2e3d813db72bde60"
             };
+
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
 
             var db = firebase.firestore();
-    </script>
-      
-    
-
-</head>
-
-<body>
+        </script>
 
 
-    <!--Back Button -->
-<!--
-    <div class="back_btn">
-      <a href="map.html"><img src="Images/Icon/back_btn.png"></a>
-      
-    </div>
+
+    </head>
+
+    <body>
+
+
+        <!--Back Button -->
+        <!--
+<div class="back_btn">
+<a href="map.html"><img src="Images/Icon/back_btn.png"></a>
+
+</div>
 -->
-  
-    <div class="form_container">
-        <form>
-            <form id="createAGroupForm">
-                <div class="groupNameDiv">
-                    Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
-                </div> <br>
+        <script>
+            
+                        var citiesRef = db.collection("cities123");
+            
+                        citiesRef.doc("SFssss").set({
+                            name: "San Francisco", state: "CA", country: "USA",
+                            capital: false, population: 860000,
+                            regions: ["west_coast", "norcal"] });
+            
+        </script>
+        
 
-                <div id="form">
-                  What kind of accessibility services does your building provide?
-                    <br>
-                    <br>
-                    Wheelchair Ramp
-                    <br>
-                    Yes<input id="wheelYes" type="radio" value="COMP1510" required>
-                    No<input id="wheelNo" type="radio" value="COMP1510" required>
-                    <br>
-                    Gender Neutral Washrooms
-                    <br>
-                    Yes<input id="washroomYes" type="radio" value="COMP1510" required>
-                    No<input id="washroomNo" type="radio" value="COMP1510" required>
-                    <br>
-                    
-                </div>
+        <div class="form_container">
+            <form>
+                <form id="createAGroupForm">
+                    <div class="groupNameDiv">
+                        Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
+                    </div> <br>
 
-                <br>
-        </form>
+                    <div id="form">
+                        What kind of accessibility services does your building provide?
+                        <br>
+                        <br>
+                        Wheelchair Ramp
+                        <br>
+                        Yes<input id="wheelYes" type="radio" value="COMP1510" required>
+                        No<input id="wheelNo" type="radio" value="COMP1510" required>
+                        <br>
+                        Gender Neutral Washrooms
+                        <br>
+                        Yes<input id="washroomYes" type="radio" value="COMP1510" required>
+                        No<input id="washroomNo" type="radio" value="COMP1510" required>
+                        <br>
+
+                    </div>
+
+                    <br>
+                </form>
+                
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div id="result">
+        <table>
+            let table = "<table>";
+                            table += "<tr><th>Building Name</th>";
+                            table += "<th>Wheelchair</th>";
+                            table += "<th>Washroom</th></tr>";
+            
 <!--
-        <fieldset>
-            <div class="groupLocationDiv">
-                Location: <input id="groupLocationID" name="groupLocationA" type="radio" value="SE12" required>SE12
-                <input name="groupLocationA" type="radio" value="SE2" required>SE2
-            </div>
-            <br />
+                            for (let i = 0; i < data.rows.length; i++) {
+                                table += "<tr><td>" + data.rows[i].ID + "</td><td>" + data.rows[i].first_name + "</td><td>"
+                                    + data.rows[i]['last_name'] + "</td><td>" + data.rows[i]['email'] + "</td></tr>" ;
+                            }
+-->
+            
+            
+            </table>
+        
+        </div>
+                
+                <!--
+<fieldset>
+<div class="groupLocationDiv">
+Location: <input id="groupLocationID" name="groupLocationA" type="radio" value="SE12" required>SE12
+<input name="groupLocationA" type="radio" value="SE2" required>SE2
+</div>
+<br />
 
-            <div class="groupDetailsDiv">
-                Details: <input id="groupDetailsID" name="groupDetailsA" type="text"
-                    placeholder="Add any additional details">
-            </div>
-            <br />
-        </fieldset>
+<div class="groupDetailsDiv">
+Details: <input id="groupDetailsID" name="groupDetailsA" type="text"
+placeholder="Add any additional details">
+</div>
+<br />
+</fieldset>
 -->
 
-        <button type="submit" id="submit">Submit</button>
-
-        </form>
-
-        <br />
-    </div>
-<!--
+        <!--
 <OBJECT width=100% data="footer_common.html">
 
-    </OBJECT>
+</OBJECT>
 -->
-    <!--create_a_group script, save data to our Firebase app when we
-    click submit-->
-    
-<link rel="stylesheet" href="styles/template.css">
+        <!--create_a_group script, save data to our Firebase app when we
+click submit-->
+
+        <link rel="stylesheet" href="styles/template.css">
         <script src="scripts/build.js"></script>
-  
-</body>
+
+    </body>
 
 </html>
 
