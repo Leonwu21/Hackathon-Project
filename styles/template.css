@@ -1,6 +1,25 @@
 body {
   background: #44B3C2;
   padding: 3vmax;
+  font-family: 'Comfortaa', cursive;
+}
+
+#content {
+  background: rgba(220, 240, 241, 0.946);
+  padding: 3vmax;
+  margin: 10vmax 0;
+  border-radius: 20px;
+}
+
+#submit {
+  border-radius: 10px;
+  background-color: rgba(245, 188, 150, 0.946);
+  font-weight: bold;
+}
+
+#groupNameID {
+  border-radius: 10px;
+  border-style: ridge;
 }
 
 .login-main {
@@ -150,6 +169,9 @@ body {
 
 #form {
   border: solid 1px black;
+  padding: 2vmax;
+  border-radius: 10px;
+
 }
 
 .groupNameDiv {}
