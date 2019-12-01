@@ -1,5 +1,6 @@
 body{
-	background: #44B3C2;
+  background: #44B3C2;
+  padding: 3vmax;
 }
 .login-main{
 	margin-top: 150px;
@@ -129,4 +130,7 @@ body{
 }
 #form {
     border: solid 1px black;
+}
+.groupNameDiv {
+
 }
