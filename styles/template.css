@@ -261,15 +261,18 @@ img {
     cursor: pointer;
 }
 
+
 #confirm {
-    margin-top: 50%;
-    margin-left: 20%;
+    background: rgba(220, 240, 241, 0.946);
+    padding: 3vmax;
+    margin: 2vmax 0;
+    border-radius: 20px;
+    margin-top: 8%;
+    margin-left: 25%;
     width: 40%;
-    height: 15%;
+    height: 25%;
     display: none;
-    background-color: antiquewhite;
-    z-index: 10;
-    border: 1px solid grey;
+    z-index: 11;
     overflow: hidden;
     position: absolute;
 }

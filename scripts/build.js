@@ -17,6 +17,8 @@ function showConfirm() {
     $("#confirm").show()
     d = $(event.target).attr("id").charAt(6);
     d = parseInt(d);
+    
+    console.log("showconfirm" + d)
 }
 
 
@@ -84,9 +86,10 @@ function createTable() {
             table += "<tr id='row" + i + "'><td>" + name + "</td><td>"
                                    + wheelchair + "</td><td>" + washroom + deleteImg + "</td></tr>";
             //console.log("what is in   " + table);
-            $("#newContent").html(table);
             i++;
         })
+        
+        $("#newContent").append(table);
         console.log(idList);
     })
 }
