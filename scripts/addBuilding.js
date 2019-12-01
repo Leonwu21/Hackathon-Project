@@ -4,7 +4,7 @@ function addBuilding() {
     console.log(document.getElementById("groupNameID").value);
     console.log("working");
     db.collection("buildings").add({
-      name = "test"
+//      let name = "test"
     });
   });
 }
