@@ -68,23 +68,7 @@ HTML for creating a group form-->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
     <title>Create a Group</title>
-    <script>
-      var firebaseConfig = {
-
-        apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
-        authDomain: "studybuddy-ce7e9.firebaseapp.com",
-        databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
-        projectId: "studybuddy-ce7e9",
-        storageBucket: "studybuddy-ce7e9.appspot.com",
-        messagingSenderId: "288586368350",
-        appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
-        measurementId: "G-VYXB59FGNZ"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      var db = firebase.firestore();
-    </script>
+  
 
     <link rel="stylesheet" href="styles/template.css">
 
@@ -96,7 +80,7 @@ HTML for creating a group form-->
 
   <script>
 
-    var citiesRef = db.collection("cities1234");
+    var citiesRef = db.collection("cities12345");
 
     citiesRef.doc("SFssss").set({
       name: "San Francisco", state: "CA", country: "USA",
@@ -110,7 +94,7 @@ HTML for creating a group form-->
     <div class="form_container">
       <form id="buildingForm">
         <div class="groupNameDiv">
-          Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required="required"
+          Building: <input id="name" name="groupNameA" type="text" placeholder="Build Name" required="required"
             autofocus="autofocus">
         </div> <br>
 
@@ -120,13 +104,13 @@ HTML for creating a group form-->
           <br>
           Wheelchair Ramp
           <br>
-          Yes<input id="wheelYes" type="radio" value="COMP1510" required>
-          No<input id="wheelNo" type="radio" value="COMP1510" required>
+          Yes<input name="wheelchair" id="wheelYes" type="radio" value=true required>
+          No<input name="wheelchair" id="wheelNo" type="radio" value=false required>
           <br>
           Gender Neutral Washrooms
           <br>
-          Yes<input id="washroomYes" type="radio" value="COMP1510" required>
-          No<input id="washroomNo" type="radio" value="COMP1510" required>
+          Yes<input name="washroom" id="washroomYes" type="radio" value="true" required>
+          No<input name="washroom" id="washroomNo" type="radio" value="false" required>
           <br>
 
         </div>
@@ -140,9 +124,6 @@ HTML for creating a group form-->
 
     <div id="result">
 
-
-      <link rel="stylesheet" href="styles/template.css">
-      <script src="scripts/build.js"></script>
     </div>
 
   </div>

@@ -2,7 +2,6 @@ console.log("hi");
 
 
 
-
 createTable();
 $(document).on('click', '#submit', showResult);
 
@@ -17,31 +16,59 @@ console.log("table created")
 
 db.collection("buildings").get().then(function (querySnapshot) {
 
-
-  querySnapshot.forEach(function (doc) {
-    
   let name;
   let wheelchair;
   let washroom;
-    name = doc.data().name;
-    wheelchair = doc.data().wheelchair;
-    washroom = doc.data().washroom;
 
     
   let table = "<table>";
   table += "<tr><th>Building Name</th>";
   table += "<th>Wheelchair</th>";
   table += "<th>Washroom</th></tr>";
-
+    
+  querySnapshot.forEach(function (doc) {
+      
+    name = doc.data().name;
+    wheelchair = doc.data().wheelchair;
+    washroom = doc.data().washroom;
+    
   table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>" ;
-  $("#result").html(table);
+  console.log("what is in   " + table);
+  
 
   })
 
-
+$("#result").html(table);
 
 })
 }
+
+
+
+
+$(document).ready(function() {
+  console.log("hellohere");
+    
+    /*Date object to add to a data field in the future*/
+    var currentDateandTime = new Date();
+   
+    var groupForm =  document.querySelector('#buildingForm');
+  
+    groupForm.addEventListener('submit', (e) => {
+        
+        console.log(e);
+      e.preventDefault();
+      console.log("hrewq");
+      db.collection('buildings').add({
+          name: document.getElementById("name").value,
+          wheelchair: groupForm.wheelchair.value,
+          washroom: groupForm.washroom.value
+        
+      })
+    });
+});
+
+
 
 
 // db.collection("buildings").get().then(function (querySnapshot) {
