@@ -1,7 +1,5 @@
-<!--Author: Abeer Haroon
-Version 1.0.2 November 20/2019
-
-HTML for creating a group form-->
+<!--Author: Jack Shih, Leon Wu
+November 30/2019-->
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -12,7 +10,7 @@ HTML for creating a group form-->
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
         <!-- TODO: Add SDKs for Firebase products that you want to use
-https://firebase.google.com/docs/web/setup#available-libraries -->
+            https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
 
         <!-- The Firebase Authentication UI Library -->
@@ -30,7 +28,6 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
 
         <script>
             var firebaseConfig = {
-
                 apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
                 authDomain: "hackathon-project-7160d.firebaseapp.com",
                 databaseURL: "https://hackathon-project-7160d.firebaseio.com",
@@ -39,10 +36,8 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                 messagingSenderId: "808375394593",
                 appId: "1:808375394593:web:4615ca2e3d813db72bde60"
             };
-
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-
             var db = firebase.firestore();
         </script>
 
@@ -58,9 +53,6 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
         <link rel="stylesheet" href="styles/template.css">
-
-
-
     </head>
 
     <body id="body">
@@ -72,17 +64,20 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
 
             <div id="confirm">
                 Do you want to remove this Building?
-
-                <div><img id="no" src="Images/no.png"/><img id ="yes" src="images/yes.png"/></div>
+                <div>
+                    <img id="no" src="Images/no.png"/>
+                    <img id ="yes" src="images/yes.png"/>
+                </div>
             </div>
-            
-            
+
+
             <div class="form_container">
                 <form id="buildingForm">
                     <div class="groupNameDiv">
-                        Building: <input id="name" name="groupNameA" type="text" placeholder="Enter Name" required="required"
-                                         autofocus="autofocus">
-                    </div> <br>
+                        Building:
+                        <input id="name" name="groupNameA" type="text" placeholder="Enter Name" required="required" autofocus="autofocus">
+                    </div>
+                    <br>
 
                     <div id="form">
                         What kind of accessibility services does your building provide?
@@ -100,9 +95,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                         <br>
 
                     </div>
-
                     <br>
-
 
                     <button type="submit" class="submit">Submit</button>
                     <button type="button" class="submit" id="display">Display tables</button>
@@ -110,9 +103,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
             </div>
         </div>
 
-
         <div id="result">
-
         </div>
 
         <div id='newContent' class="content" style="display: none">
@@ -144,7 +135,3 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     </body>
 
 </html>
-
-<!--Time Created and Created by [User] is collected
-not entered by user
--->

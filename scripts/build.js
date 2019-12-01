@@ -73,20 +73,21 @@ function createTable() {
         var newContent = $("<div id='newContent' class='content'></div>");
 
         let i = 0;
-
-        let deleteImg;
+        
         querySnapshot.forEach(function (doc) {
+            let deleteImg;
             deleteImg = "<img id='delete" + i + "' src='images/delete.png'>"
             idList.push(doc.id);
             name = doc.data().name;
             wheelchair = doc.data().wheelchair;
             washroom = doc.data().washroom;
-            table += "<tr id='row" + i + "'><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + deleteImg + "</td></tr>";
+            table += "<tr id='row" + i + "'><td>" + name + "</td><td>"
+                                   + wheelchair + "</td><td>" + washroom + deleteImg + "</td></tr>";
             //console.log("what is in   " + table);
             $("#newContent").html(table);
             i++;
         })
-        console.log(idList)
+        console.log(idList);
     })
 }
 
