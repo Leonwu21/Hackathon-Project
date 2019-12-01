@@ -4,7 +4,12 @@ console.log("hi");
 
 
 createTable();
+$(document).on('click', '#submit', showResult);
+showResult();
+function showResult() {
+$("#result").show();
 
+}
 
 function createTable() {
 
