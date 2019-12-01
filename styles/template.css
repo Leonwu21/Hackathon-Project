@@ -11,10 +11,15 @@ body {
   border-radius: 20px;
 }
 
-#submit {
+.submit {
   border-radius: 10px;
   background-color: rgba(245, 188, 150, 0.946);
   font-weight: bold;
+  padding: 0.5vmax;
+}
+
+#display {
+  float: right;
 }
 
 #groupNameID {
@@ -232,4 +237,8 @@ tr:nth-child(odd) {
 #content {
   z-index: 5;
 
+}
+
+.bubble-boxes {
+  z-index: -5;
 }

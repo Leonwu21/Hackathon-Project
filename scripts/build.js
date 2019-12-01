@@ -4,7 +4,7 @@ console.log("hi");
 
 
 createTable();
-$(document).on('click', '#submit', showResult);
+$(document).on('click', '#display', showResult);
 
 function showResult() {
   $("#result").show();
@@ -17,7 +17,7 @@ function createTable() {
 
   db.collection("buildings").get().then(function (querySnapshot) {
 
-
+    var newContent = $("<div id='newContent' class='content'></div>");
     querySnapshot.forEach(function (doc) {
 
       let name;
@@ -26,7 +26,7 @@ function createTable() {
       name = doc.data().name;
       wheelchair = doc.data().wheelchair;
       washroom = doc.data().washroom;
-      var newContent = $("<div id='newContent' class='content'></div>");
+
       $("#body").append(newContent);
 
       let table = "<table>";

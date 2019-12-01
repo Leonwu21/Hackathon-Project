@@ -9,10 +9,16 @@ HTML for creating a group form-->
 <head>
   <!---->
   <!--FIREBASE LIBRARY-->
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+
+  <!-- The Firebase Authentication UI Library -->
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
 
   <!--jQuery library, used to manipulate HTML elements with javascript-->
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -52,12 +58,6 @@ HTML for creating a group form-->
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles/template.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-  <script>
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    var db = firebase.firestore();
-  </script>
 
   <link rel="stylesheet" href="styles/template.css">
 
@@ -107,7 +107,8 @@ HTML for creating a group form-->
         <br>
 
 
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" class="submit">Submit</button>
+        <button type="button" class="submit" id="display">Display tables</button>
       </form>
     </div>
   </div>
@@ -132,6 +133,10 @@ HTML for creating a group form-->
 
   <link rel="stylesheet" href="styles/template.css">
   <script src="scripts/build.js"></script>
+  <script src="scripts/addBuilding.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>
