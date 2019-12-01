@@ -6,138 +6,142 @@ HTML for creating a group form-->
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <!---->
-  <!--FIREBASE LIBRARY-->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <head>
+        <!---->
+        <!--FIREBASE LIBRARY-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
 
-  <!-- The Firebase Authentication UI Library -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+        <!-- The Firebase Authentication UI Library -->
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
 
-  <!--jQuery library, used to manipulate HTML elements with javascript-->
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-
-
-
-  <meta charset="utf-8">
-  <title>Buildings</title>
+        <!--jQuery library, used to manipulate HTML elements with javascript-->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 
 
+        <meta charset="utf-8">
+        <title>Buildings</title>
 
-  <script>
-    var firebaseConfig = {
+        <script>
+            var firebaseConfig = {
 
-      apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
-      authDomain: "hackathon-project-7160d.firebaseapp.com",
-      databaseURL: "https://hackathon-project-7160d.firebaseio.com",
-      projectId: "hackathon-project-7160d",
-      storageBucket: "hackathon-project-7160d.appspot.com",
-      messagingSenderId: "808375394593",
-      appId: "1:808375394593:web:4615ca2e3d813db72bde60"
-    };
+                apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
+                authDomain: "hackathon-project-7160d.firebaseapp.com",
+                databaseURL: "https://hackathon-project-7160d.firebaseio.com",
+                projectId: "hackathon-project-7160d",
+                storageBucket: "hackathon-project-7160d.appspot.com",
+                messagingSenderId: "808375394593",
+                appId: "1:808375394593:web:4615ca2e3d813db72bde60"
+            };
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
 
-    var db = firebase.firestore();
-  </script>
+            var db = firebase.firestore();
+        </script>
 
-  <!--jQuery library, used to manipulate HTML elements with javascript-->
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/template.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="styles/template.css">
-
+        <!--jQuery library, used to manipulate HTML elements with javascript-->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/template.css">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 
-</head>
+        <link rel="stylesheet" href="styles/template.css">
 
-<body id="body">
-  <div id="heading">
-    <p id="title">AccessiBuildings</p>
-    <p id="description">A simple app to find accessible buildings!</p>
-  </div>
-  <div class="content">
 
-    <div class="form_container">
-      <form id="buildingForm">
-        <div class="groupNameDiv">
-          Building: <input id="name" name="groupNameA" type="text" placeholder="Enter Name" required="required"
-            autofocus="autofocus">
-        </div> <br>
 
-        <div id="form">
-          What kind of accessibility services does your building provide?
-          <br>
-          <br>
-          Wheelchair Ramp
-          <br>
-          Yes<input name="wheelchair" id="wheelYes" type="radio" value="Yes" required>
-          No<input name="wheelchair" id="wheelNo" type="radio" value="No" required>
-          <br>
-          Gender Neutral Washrooms
-          <br>
-          Yes<input name="washroom" id="washroomYes" type="radio" value="Yes" required>
-          No<input name="washroom" id="washroomNo" type="radio" value="No" required>
-          <br>
+    </head>
+
+    <body id="body">
+        <div id="heading">
+            <p id="title">AccessiBuildings</p>
+            <p id="description">A simple app to find accessible buildings!</p>
+        </div>
+        <div class="content">
+
+            <div id="confirm">
+                Do you want to remove this Building?
+
+                <div><img id="no" src="Images/no.png"/><img id ="yes" src="images/yes.png"/></div>
+            </div>
+            
+            
+            <div class="form_container">
+                <form id="buildingForm">
+                    <div class="groupNameDiv">
+                        Building: <input id="name" name="groupNameA" type="text" placeholder="Enter Name" required="required"
+                                         autofocus="autofocus">
+                    </div> <br>
+
+                    <div id="form">
+                        What kind of accessibility services does your building provide?
+                        <br>
+                        <br>
+                        Wheelchair Ramp
+                        <br>
+                        Yes<input name="wheelchair" id="wheelYes" type="radio" value="Yes" required>
+                        No<input name="wheelchair" id="wheelNo" type="radio" value="No" required>
+                        <br>
+                        Gender Neutral Washrooms
+                        <br>
+                        Yes<input name="washroom" id="washroomYes" type="radio" value="Yes" required>
+                        No<input name="washroom" id="washroomNo" type="radio" value="No" required>
+                        <br>
+
+                    </div>
+
+                    <br>
+
+
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="button" class="submit" id="display">Display tables</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div id="result">
 
         </div>
 
-        <br>
+        <div id='newContent' class="content" style="display: none">
+            <div id="result">
+
+            </div>
+
+        </div>
+        <ul class="bubble-boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
 
 
-        <button type="submit" class="submit">Submit</button>
-        <button type="button" class="submit" id="display">Display tables</button>
-      </form>
-    </div>
-  </div>
+        <link rel="stylesheet" href="styles/template.css">
+        <script src="scripts/build.js"></script>
+        <script src="scripts/addBuilding.js"></script>
+        <script>
 
-
-  <div id="result">
-
-  </div>
-
-  <div id='newContent' class="content" style="display: none">
-    <div id="result">
-
-    </div>
-
-  </div>
-  <ul class="bubble-boxes">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-
-
-  <link rel="stylesheet" href="styles/template.css">
-  <script src="scripts/build.js"></script>
-  <script src="scripts/addBuilding.js"></script>
-  <script>
-
-  </script>
-</body>
+        </script>
+    </body>
 
 </html>
 

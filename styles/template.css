@@ -1,188 +1,189 @@
 body {
-  background: #44B3C2;
-  padding: 3vmax;
-  font-family: 'Comfortaa', cursive;
+    background: #44B3C2;
+    padding: 3vmax;
+    font-family: 'Comfortaa', cursive;
 }
 
 #title {
-  color: white;
-  text-align: center;
-  font-size: 5vmax;
+    color: white;
+    text-align: center;
+    font-size: 5vmax;
 }
 
 #description {
-  color: white;
-  text-align: center;
-  font-size: 2vmax;
+    color: white;
+    text-align: center;
+    font-size: 2vmax;
 }
 
 .content {
-  background: rgba(220, 240, 241, 0.946);
-  padding: 3vmax;
-  margin: 2vmax 0;
-  border-radius: 20px;
+    background: rgba(220, 240, 241, 0.946);
+    padding: 3vmax;
+    margin: 2vmax 0;
+    border-radius: 20px;
 }
 
 .submit {
-  border-radius: 10px;
-  background-color: rgba(245, 188, 150, 0.946);
-  font-weight: bold;
-  padding: 0.5vmax;
+    border-radius: 10px;
+    background-color: rgba(245, 188, 150, 0.946);
+    font-weight: bold;
+    padding: 0.5vmax;
 }
 
 #display {
-  float: right;
+    float: right;
+    cursor: pointer;
 }
 
 #groupNameID {
-  border-radius: 10px;
-  border-style: ridge;
+    border-radius: 10px;
+    border-style: ridge;
 }
 
 .login-main {
-  margin-top: 150px;
-  z-index: 1;
+    margin-top: 150px;
+    z-index: 1;
 }
 
 .heading-image {
-  top: 0%;
-  left: 50%;
-  opacity: 0.9;
-  height: 120px;
-  width: 120px;
-  border-radius: 100%;
-  background: #2B5377;
-  position: absolute;
-  transform: translate(-50%, -50%);
+    top: 0%;
+    left: 50%;
+    opacity: 0.9;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    background: #2B5377;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
 .heading-image i {
-  font-size: 60px;
-  margin-top: 30px;
+    font-size: 60px;
+    margin-top: 30px;
 }
 
 .input-group-prepend span {
-  font-size: 20px;
-  color: #9B9FAB;
+    font-size: 20px;
+    color: #9B9FAB;
 }
 
 .options {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .copyright-main {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 /*Bubble Boxes Animation CSS*/
 
 .bubble-boxes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  z-index: -5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    z-index: -5;
 }
 
 .bubble-boxes li {
-  position: absolute;
-  list-style: none;
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, .2);
-  animation: animate 25s linear infinite;
-  bottom: -800px;
+    position: absolute;
+    list-style: none;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .2);
+    animation: animate 25s linear infinite;
+    bottom: -800px;
 }
 
 .bubble-boxes li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0;
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0;
 }
 
 .bubble-boxes li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
 }
 
 .bubble-boxes li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
 }
 
 .bubble-boxes li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
 }
 
 .bubble-boxes li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
 }
 
 .bubble-boxes li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
 }
 
 .bubble-boxes li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
 }
 
 .bubble-boxes li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
 }
 
 .bubble-boxes li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
 }
 
 .bubble-boxes li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 12s;
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 12s;
 }
 
 @keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
 
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 1;
-    border-radius: 50%;
-  }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 1;
+        border-radius: 50%;
+    }
 }
 
 /*---------------------------------------*/
@@ -191,71 +192,90 @@ body {
 
 
 #form {
-  border: solid 1px black;
-  padding: 2vmax;
-  border-radius: 10px;
+    border: solid 1px black;
+    padding: 2vmax;
+    border-radius: 10px;
 }
 
 
 #result {
-  font-size: 12pt;
-  height: 18pt;
-  /* display: none; */
+    font-size: 12pt;
+    height: 18pt;
+    /* display: none; */
 }
 
 table {
-  width: 80%;
-  margin: auto;
-  border-style: hidden;
+    width: 80%;
+    margin: auto;
+    border-style: hidden;
 }
 
 table tr:first-child th:first-child {
-  border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 table tr:first-child th:last-child {
-  border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 table tr:last-child td:first-child {
-  border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 table tr:last-child td:last-child {
-  border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 td,
 th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
 th {
-  font-size: 12pt;
-  font-weight: bold;
-  background-color: rgba(245, 188, 150, 0.946);
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: rgba(245, 188, 150, 0.946);
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+    background-color: #dddddd;
 }
 
 tr:nth-child(odd) {
-  background-color: white;
+    background-color: white;
 }
 
 #content {
-  z-index: 5;
-
+    z-index: 5;
 }
 
 .bubble-boxes {
-  z-index: -5;
+    z-index: -5;
 }
 
 img {
     float: right;
     width: 20px;
+    cursor: pointer;
+}
+
+#confirm {
+    margin-top: 50%;
+    margin-left: 20%;
+    width: 40%;
+    height: 15%;
+    display: none;
+    background-color: antiquewhite;
+    z-index: 10;
+    border: 1px solid grey;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+#yes, #no {
+    width: 50px;
+    cursor: pointer;
 }
