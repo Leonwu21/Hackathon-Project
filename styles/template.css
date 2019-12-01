@@ -4,10 +4,10 @@ body {
   font-family: 'Comfortaa', cursive;
 }
 
-#content {
+.content {
   background: rgba(220, 240, 241, 0.946);
   padding: 3vmax;
-  margin: 10vmax 0;
+  margin: 2vmax 0;
   border-radius: 20px;
 }
 
@@ -166,9 +166,6 @@ body {
     border-radius: 50%;
   }
 }
-
-.groupNameDiv {}
-
 
 /*---------------------------------------*/
 /*Jack's style*/

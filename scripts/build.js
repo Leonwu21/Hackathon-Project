@@ -7,40 +7,42 @@ createTable();
 $(document).on('click', '#submit', showResult);
 
 function showResult() {
-$("#result").show();
+  $("#result").show();
 
 }
 
 function createTable() {
 
-console.log("table created")
+  console.log("table created")
 
-db.collection("buildings").get().then(function (querySnapshot) {
+  db.collection("buildings").get().then(function (querySnapshot) {
 
 
-  querySnapshot.forEach(function (doc) {
-    
-  let name;
-  let wheelchair;
-  let washroom;
-    name = doc.data().name;
-    wheelchair = doc.data().wheelchair;
-    washroom = doc.data().washroom;
+    querySnapshot.forEach(function (doc) {
 
-    
-  let table = "<table>";
-  table += "<tr><th>Building Name</th>";
-  table += "<th>Wheelchair</th>";
-  table += "<th>Washroom</th></tr>";
+      let name;
+      let wheelchair;
+      let washroom;
+      name = doc.data().name;
+      wheelchair = doc.data().wheelchair;
+      washroom = doc.data().washroom;
+      var newContent = $("<div id='newContent' class='content'></div>");
+      $("#body").append(newContent);
 
-  table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>" ;
-  $("#result").html(table);
+      let table = "<table>";
+      table += "<tr><th>Building Name</th>";
+      table += "<th>Wheelchair</th>";
+      table += "<th>Washroom</th></tr>";
+
+      table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>";
+      $("#result").append(newContent);
+      $(newContent).append(table);
+
+    })
+
+
 
   })
-
-
-
-})
 }
 
 

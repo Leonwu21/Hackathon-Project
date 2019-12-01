@@ -4,7 +4,7 @@ Version 1.0.2 November 20/2019
 HTML for creating a group form-->
 
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
   <!---->
@@ -13,11 +13,9 @@ HTML for creating a group form-->
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <!------------------------------------------------------>
 
   <!--jQuery library, used to manipulate HTML elements with javascript-->
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <!------------------------------------------------------->
 
 
 
@@ -45,54 +43,29 @@ HTML for creating a group form-->
     var db = firebase.firestore();
   </script>
 
-  <head>
-    <!---->
-    <!--FIREBASE LIBRARY-->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <!------------------------------------------------------>
+  <!--jQuery library, used to manipulate HTML elements with javascript-->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/template.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-    <!--jQuery library, used to manipulate HTML elements with javascript-->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <!------------------------------------------------------->
-    <title>Landing Page</title>
-    <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/template.css">
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    var db = firebase.firestore();
+  </script>
 
-    <title>Create a Group</title>
-    <script>
-      var firebaseConfig = {
-
-        apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
-        authDomain: "studybuddy-ce7e9.firebaseapp.com",
-        databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
-        projectId: "studybuddy-ce7e9",
-        storageBucket: "studybuddy-ce7e9.appspot.com",
-        messagingSenderId: "288586368350",
-        appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
-        measurementId: "G-VYXB59FGNZ"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      var db = firebase.firestore();
-    </script>
-
-    <link rel="stylesheet" href="styles/template.css">
+  <link rel="stylesheet" href="styles/template.css">
 
 
 
-  </head>
+</head>
 
-<body>
+<body id="body">
 
   <script>
 
@@ -105,7 +78,7 @@ HTML for creating a group form-->
     });
 
   </script>
-  <div id="content">
+  <div class="content">
 
     <div class="form_container">
       <form id="buildingForm">
@@ -137,19 +110,10 @@ HTML for creating a group form-->
         <button type="submit" id="submit">Submit</button>
       </form>
     </div>
-
-    <div id="result">
-
-
-      <link rel="stylesheet" href="styles/template.css">
-      <script src="scripts/build.js"></script>
-    </div>
+  </div>
+  <div id="result">
 
   </div>
-
-  <script>
-
-  </script>
 
 
   <ul class="bubble-boxes">
