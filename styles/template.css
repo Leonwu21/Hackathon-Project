@@ -254,3 +254,8 @@ tr:nth-child(odd) {
 .bubble-boxes {
   z-index: -5;
 }
+
+img {
+    float: right;
+    width: 20px;
+}

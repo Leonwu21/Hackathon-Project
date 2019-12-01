@@ -35,16 +35,36 @@ function createTable() {
     table += "<th>Gender Neutral Washroom</th></tr>";
     var newContent = $("<div id='newContent' class='content'></div>");
 
+      let i = 0;
+      let idList = [];
+      let deleteImg = "<img id='delete" + i + "' src='images/delete.png'>"
     querySnapshot.forEach(function (doc) {
+        idList.push(doc.id);
       name = doc.data().name;
       wheelchair = doc.data().wheelchair;
       washroom = doc.data().washroom;
-      table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>";
+      table += "<tr id='row" + i + "'><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + deleteImg + "</td></tr>";
       //console.log("what is in   " + table);
       $("#newContent").html(table);
+        i++;
     })
+      console.log(idList)
   })
 }
+
+
+//////////////////////////////////////////////////
+//This removes the table row
+//////////////////////////////////////////////////
+function removeRow() {
+    $('img[id^=delete]').click(function(event) {
+    let d;
+    d = $(event.target).attr("id").charAt(6);
+    d = parseInt(d);
+    console.log(d);
+    })
+}
+
 
 //////////////////////////////////////////////////
 //This submits the form and writes to database
