@@ -67,18 +67,10 @@ HTML for creating a group form-->
 </head>
 
 <body id="body">
-
-  <script>
-
-    var citiesRef = db.collection("cities12345");
-
-    citiesRef.doc("SFssss").set({
-      name: "San Francisco", state: "CA", country: "USA",
-      capital: false, population: 860000,
-      regions: ["west_coast", "norcal"]
-    });
-
-  </script>
+  <div id="heading">
+    <p id="title">AccessiBuildings</p>
+    <p id="description">A simple app to find accessible buildings!</p>
+  </div>
   <div class="content">
 
     <div class="form_container">
@@ -113,8 +105,8 @@ HTML for creating a group form-->
       </form>
     </div>
   </div>
-    
-    
+
+
   <div id="result">
 
   </div>

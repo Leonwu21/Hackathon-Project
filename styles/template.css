@@ -4,6 +4,18 @@ body {
   font-family: 'Comfortaa', cursive;
 }
 
+#title {
+  color: white;
+  text-align: center;
+  font-size: 5vmax;
+}
+
+#description {
+  color: white;
+  text-align: center;
+  font-size: 2vmax;
+}
+
 .content {
   background: rgba(220, 240, 241, 0.946);
   padding: 3vmax;
