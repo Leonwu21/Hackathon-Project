@@ -6,17 +6,18 @@ createTable();
 $(document).on('click', '#submit', showResult);
 
 function showResult() {
-$("#result").show();
+  $("#result").show();
 
 }
 
 function createTable() {
 
-console.log("table created")
+  console.log("table created")
 
-db.collection("buildings").get().then(function (querySnapshot) {
+  db.collection("buildings").get().then(function (querySnapshot) {
 
-  let name;
+//<<<<<<< HEAD
+      let name;
   let wheelchair;
   let washroom;
 
@@ -35,15 +36,38 @@ db.collection("buildings").get().then(function (querySnapshot) {
   table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>" ;
   console.log("what is in   " + table);
   
+//=======
 
-  })
+//     querySnapshot.forEach(function (doc) {
+
+//       let name;
+//       let wheelchair;
+//       let washroom;
+//       name = doc.data().name;
+//       wheelchair = doc.data().wheelchair;
+//       washroom = doc.data().washroom;
+//       var newContent = $("<div id='newContent' class='content'></div>");
+//       $("#body").append(newContent);
+
+//       let table = "<table>";
+//       table += "<tr><th>Building Name</th>";
+//       table += "<th>Wheelchair</th>";
+//       table += "<th>Washroom</th></tr>";
+//// >>>>>>> 1ca181da59e577f9da88e3c1c6ff00edf6e85d31
+//
+//      table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>";
+//      $("#result").append(newContent);
+//      $(newContent).append(table);
+//
+//    })
 
 $("#result").html(table);
 
-})
+  })
+//}
+  })
+
 }
-
-
 
 
 $(document).ready(function() {

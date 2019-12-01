@@ -4,10 +4,10 @@ body {
   font-family: 'Comfortaa', cursive;
 }
 
-#content {
+.content {
   background: rgba(220, 240, 241, 0.946);
   padding: 3vmax;
-  margin: 10vmax 0;
+  margin: 2vmax 0;
   border-radius: 20px;
 }
 
@@ -168,9 +168,6 @@ body {
   }
 }
 
-.groupNameDiv {}
-
-
 /*---------------------------------------*/
 /*Jack's style*/
 /*---------------------------------------*/
@@ -180,22 +177,35 @@ body {
   border: solid 1px black;
   padding: 2vmax;
   border-radius: 10px;
-
 }
 
 
 #result {
-  font-size: 14pt;
+  font-size: 12pt;
   height: 18pt;
-  color: red;
-  font-weight: bold;
+
 }
 
 table {
-  border-collapse: collapse;
   width: 80%;
-  background-color: cornsilk;
   margin: auto;
+  border-style: hidden;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 td,
@@ -206,14 +216,18 @@ th {
 }
 
 th {
-  color: darkturquoise;
-  font-size: 15pt;
+  font-size: 12pt;
+  font-weight: bold;
+  background-color: rgba(245, 188, 150, 0.946);
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+tr:nth-child(odd) {
+  background-color: white;
+}
 
 #content {
   z-index: 5;
