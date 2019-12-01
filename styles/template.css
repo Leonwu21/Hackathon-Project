@@ -167,6 +167,14 @@ body {
   }
 }
 
+.groupNameDiv {}
+
+
+/*---------------------------------------*/
+/*Jack's style*/
+/*---------------------------------------*/
+
+
 #form {
   border: solid 1px black;
   padding: 2vmax;
@@ -174,13 +182,14 @@ body {
 
 }
 
-.groupNameDiv {}
 
 #result {
   font-size: 14pt;
   height: 18pt;
   color: red;
   font-weight: bold;
+  display: none;
+
 }
 
 table {

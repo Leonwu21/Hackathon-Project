@@ -131,13 +131,34 @@ HTML for creating a group form-->
 
           </div>
 
-          <br>
+          <div class="form_container">
+            <form id="buildingForm">
+              <div class="groupNameDiv">
+                Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
+              </div> <br>
+
+              <div id="form">
+                What kind of accessibility services does your building provide?
+                <br>
+                <br>
+                Wheelchair Ramp
+                <br>
+                Yes<input id="wheelYes" type="radio" value="COMP1510" required>
+                No<input id="wheelNo" type="radio" value="COMP1510" required>
+                <br>
+                Gender Neutral Washrooms
+                <br>
+                Yes<input id="washroomYes" type="radio" value="COMP1510" required>
+                No<input id="washroomNo" type="radio" value="COMP1510" required>
+                <br>
+            </form>
+
+
+            <button type="submit" id="submit">Submit</button>
         </form>
-
-
-        <button type="submit" id="submit">Submit</button>
-      </form>
     </div>
+
+    <br>
 
     <div id="result">
 
