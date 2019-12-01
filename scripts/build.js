@@ -2,12 +2,11 @@ console.log("hi");
 
 
 
-
 createTable();
 $(document).on('click', '#display', showResult);
 
 function showResult() {
-  $("#result").show();
+  $("#newContent").show();
 
 }
 
@@ -17,33 +16,83 @@ function createTable() {
 
   db.collection("buildings").get().then(function (querySnapshot) {
 
+    //<<<<<<< HEAD
+    let name;
+    let wheelchair;
+    let washroom;
+
+
+    let table = "<table>";
+    table += "<tr><th>Building Name</th>";
+    table += "<th>Wheelchair</th>";
+    table += "<th>Washroom</th></tr>";
     var newContent = $("<div id='newContent' class='content'></div>");
+
+
     querySnapshot.forEach(function (doc) {
 
-      let name;
-      let wheelchair;
-      let washroom;
       name = doc.data().name;
       wheelchair = doc.data().wheelchair;
       washroom = doc.data().washroom;
 
-      $("#body").append(newContent);
-
-      let table = "<table>";
-      table += "<tr><th>Building Name</th>";
-      table += "<th>Wheelchair</th>";
-      table += "<th>Washroom</th></tr>";
-
       table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>";
-      $("#result").append(newContent);
-      $(newContent).append(table);
+      console.log("what is in   " + table);
+
+      //=======
+
+      //     querySnapshot.forEach(function (doc) {
+
+      //       let name;
+      //       let wheelchair;
+      //       let washroom;
+      //       name = doc.data().name;
+      //       wheelchair = doc.data().wheelchair;
+      //       washroom = doc.data().washroom;
+
+      //       $("#body").append(newContent);
+
+      //       let table = "<table>";
+      //       table += "<tr><th>Building Name</th>";
+      //       table += "<th>Wheelchair</th>";
+      //       table += "<th>Washroom</th></tr>";
+      //// >>>>>>> 1ca181da59e577f9da88e3c1c6ff00edf6e85d31
+      //
+      //      table += "<tr><td>" + name + "</td><td>" + wheelchair + "</td><td>" + washroom + "</td></tr>";
+      $("#newContent").html(table);
+      //
+      //    })
 
     })
 
-
-
+    //}
   })
+
 }
+
+
+$(document).ready(function () {
+  console.log("hellohere");
+
+  /*Date object to add to a data field in the future*/
+  var currentDateandTime = new Date();
+
+  var groupForm = document.querySelector('#buildingForm');
+
+  groupForm.addEventListener('submit', (e) => {
+
+    console.log(e);
+    e.preventDefault();
+    console.log("hrewq");
+    db.collection('buildings').add({
+      name: document.getElementById("name").value,
+      wheelchair: groupForm.wheelchair.value,
+      washroom: groupForm.washroom.value
+
+    })
+  });
+});
+
+
 
 
 // db.collection("buildings").get().then(function (querySnapshot) {
