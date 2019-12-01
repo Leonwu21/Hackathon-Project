@@ -18,164 +18,183 @@ HTML for creating a group form-->
   <!--jQuery library, used to manipulate HTML elements with javascript-->
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <!------------------------------------------------------->
-  <title>Landing Page</title>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/template.css">
+
+
+
   <meta charset="utf-8">
-  <title>Create a Group</title>
+  <title>Buildings</title>
+
+
 
 
   <script>
     var firebaseConfig = {
 
       apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
-      authDomain: "studybuddy-ce7e9.firebaseapp.com",
-      databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
-      projectId: "studybuddy-ce7e9",
-      storageBucket: "studybuddy-ce7e9.appspot.com",
-      messagingSenderId: "288586368350",
-      appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
-      measurementId: "G-VYXB59FGNZ"
+      authDomain: "hackathon-project-7160d.firebaseapp.com",
+      databaseURL: "https://hackathon-project-7160d.firebaseio.com",
+      projectId: "hackathon-project-7160d",
+      storageBucket: "hackathon-project-7160d.appspot.com",
+      messagingSenderId: "808375394593",
+      appId: "1:808375394593:web:4615ca2e3d813db72bde60"
     };
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore();
   </script>
 
-  <link rel="stylesheet" href="styles/template.css">
+  <head>
+    <!---->
+    <!--FIREBASE LIBRARY-->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <!------------------------------------------------------>
 
-</head>
+    <!--jQuery library, used to manipulate HTML elements with javascript-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!------------------------------------------------------->
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/template.css">
+    <meta charset="utf-8">
+    <title>Create a Group</title>
+
+
+    <script>
+      var firebaseConfig = {
+
+        apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
+        authDomain: "studybuddy-ce7e9.firebaseapp.com",
+        databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
+        projectId: "studybuddy-ce7e9",
+        storageBucket: "studybuddy-ce7e9.appspot.com",
+        messagingSenderId: "288586368350",
+        appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
+        measurementId: "G-VYXB59FGNZ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      var db = firebase.firestore();
+    </script>
+
+    <link rel="stylesheet" href="styles/template.css">
+
+
+
+  </head>
 
 <body>
 
 
   <!--Back Button -->
   <!--
-    <div class="back_btn">
-      <a href="map.html"><img src="Images/Icon/back_btn.png"></a>
-      
-    </div>
+<div class="back_btn">
+<a href="map.html"><img src="Images/Icon/back_btn.png"></a>
+
+</div>
 -->
+  <script>
 
-  <div class="container">
-    <div class="form_container">
-      <form>
-        <form id="createAGroupForm">
-          <div class="groupNameDiv">
-            Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
-          </div> <br>
+    var citiesRef = db.collection("cities123");
 
-          <div id="form">
-            What kind of accessibility services does your building provide?
-            <br>
-            <br>
-            Wheelchair Ramp
-            <br>
-            Yes<input id="wheelYes" type="radio" value="COMP1510" required>
-            No<input id="wheelNo" type="radio" value="COMP1510" required>
-            <br>
-            Gender Neutral Washrooms
-            <br>
-            Yes<input id="washroomYes" type="radio" value="COMP1510" required>
-            No<input id="washroomNo" type="radio" value="COMP1510" required>
-            <br>
+    citiesRef.doc("SFssss").set({
+      name: "San Francisco", state: "CA", country: "USA",
+      capital: false, population: 860000,
+      regions: ["west_coast", "norcal"]
+    });
 
-          </div>
+  </script>
 
+
+  <div class="form_container">
+    <form>
+      <form id="createAGroupForm">
+        <div class="groupNameDiv">
+          Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
+        </div> <br>
+
+        <div id="form">
+          What kind of accessibility services does your building provide?
           <br>
-        </form>
-        <!--
-        <fieldset>
-            <div class="groupLocationDiv">
-                Location: <input id="groupLocationID" name="groupLocationA" type="radio" value="SE12" required>SE12
-                <input name="groupLocationA" type="radio" value="SE2" required>SE2
-            </div>
-            <br />
+          <br>
+          Wheelchair Ramp
+          <br>
+          Yes<input id="wheelYes" type="radio" value="COMP1510" required>
+          No<input id="wheelNo" type="radio" value="COMP1510" required>
+          <br>
+          Gender Neutral Washrooms
+          <br>
+          Yes<input id="washroomYes" type="radio" value="COMP1510" required>
+          No<input id="washroomNo" type="radio" value="COMP1510" required>
+          <br>
 
-            <div class="groupDetailsDiv">
-                Details: <input id="groupDetailsID" name="groupDetailsA" type="text"
-                    placeholder="Add any additional details">
-            </div>
-            <br />
-        </fieldset>
--->
+        </div>
 
-        <button type="submit" id="submit">Submit</button>
-
+        <br>
       </form>
 
-      <div class="form_container">
-        <form>
-          <form id="createAGroupForm">
-            <div class="groupNameDiv">
-              Building: <input id="groupNameID" name="groupNameA" type="text" placeholder="Build Name" required>
-            </div> <br />
 
-            <div class="groupCourseDiv">
-              Course: <br /><input id="courseSelectID" name="courseSelectA" type="radio" value="COMP1510"
-                required>Wheelchair Ramp
-              <br />
-              Gender Neutral Washrooms
-              <input name="courseSelectA" type="radio" value="COMP1536" required>Gender Neutral Washrooms
-              <br />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </div>
 
-            </div>
-
-            <br />
-          </form>
-          <fieldset>
-            <div class="groupLocationDiv">
-              Location: <input id="groupLocationID" name="groupLocationA" type="radio" value="SE12" required>SE12
-              <input name="groupLocationA" type="radio" value="SE2" required>SE2
-            </div>
-            <br />
-
-            <div class="groupDetailsDiv">
-              Details: <input id="groupDetailsID" name="groupDetailsA" type="text"
-                placeholder="Add any additional details">
-            </div>
-            <br />
-          </fieldset>
-
-          <button type="submit" id="create_group_btn">Create Group</button>
-
-        </form>
-
-        <br />
-      </div>
-      <!--
-<OBJECT width=100% data="footer_common.html">
-
-    </OBJECT>
--->
-      <!--create_a_group script, save data to our Firebase app when we
-    click submit-->
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-      </script>
-    <script src='/scripts/build.js'>
-
-    </script>
-    <script>
-      $(document).ready(function () {
-        var form = $("")
-        $("#submit").click(function () {
-          setGenderWashrooms();
-          setRamp();
-        })
-      })
-    </script>
-
+  <div id="result">
 
 
   </div>
+
+
+  <script>
+
+    let table = "<table>";
+    table += "<tr><th>Building Name</th>";
+    table += "<th>Wheelchair</th>";
+    table += "<th>Washroom</th></tr>";
+    $("#result").html("hello");
+// <!--
+//                             for (let i = 0; i < data.rows.length; i++) {
+//                                 table += "<tr><td>" + data.rows[i].ID + "</td><td>" + data.rows[i].first_name + "</td><td>"
+//                                     + data.rows[i]['last_name'] + "</td><td>" + data.rows[i]['email'] + "</td></tr>" ;
+//                             }
+// -->
+  </script>
+
+  <!--
+<fieldset>
+<div class="groupLocationDiv">
+Location: <input id="groupLocationID" name="groupLocationA" type="radio" value="SE12" required>SE12
+<input name="groupLocationA" type="radio" value="SE2" required>SE2
+</div>
+<br />
+
+<div class="groupDetailsDiv">
+Details: <input id="groupDetailsID" name="groupDetailsA" type="text"
+placeholder="Add any additional details">
+</div>
+<br />
+</fieldset>
+-->
+
+  <!--
+<OBJECT width=100% data="footer_common.html">
+
+</OBJECT>
+-->
+  <!--create_a_group script, save data to our Firebase app when we
+click submit-->
+
+  <link rel="stylesheet" href="styles/template.css">
+  <script src="scripts/build.js"></script>
+
   <ul class="bubble-boxes">
     <li></li>
     <li></li>
