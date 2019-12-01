@@ -44,6 +44,48 @@ HTML for creating a group form-->
 
             var db = firebase.firestore();
         </script>
+<head>
+  <!---->
+  <!--FIREBASE LIBRARY-->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <!------------------------------------------------------>
+
+  <!--jQuery library, used to manipulate HTML elements with javascript-->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!------------------------------------------------------->
+  <title>Landing Page</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/template.css">
+  <meta charset="utf-8">
+  <title>Create a Group</title>
+
+
+  <script>
+    var firebaseConfig = {
+
+      apiKey: "AIzaSyDnubsXusBPP_EQ_oViSy9vM3vOY2dVSIw",
+      authDomain: "studybuddy-ce7e9.firebaseapp.com",
+      databaseURL: "https://studybuddy-ce7e9.firebaseio.com",
+      projectId: "studybuddy-ce7e9",
+      storageBucket: "studybuddy-ce7e9.appspot.com",
+      messagingSenderId: "288586368350",
+      appId: "1:288586368350:web:c13d8a08c9249b15cbbbcf",
+      measurementId: "G-VYXB59FGNZ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var db = firebase.firestore();
+  </script>
+
+  <link rel="stylesheet" href="styles/template.css">
 
 
 
@@ -104,24 +146,26 @@ HTML for creating a group form-->
         </div>
         
         <div id="result">
-        <table>
-            let table = "<table>";
-                            table += "<tr><th>Building Name</th>";
-                            table += "<th>Wheelchair</th>";
-                            table += "<th>Washroom</th></tr>";
-            
-<!--
-                            for (let i = 0; i < data.rows.length; i++) {
-                                table += "<tr><td>" + data.rows[i].ID + "</td><td>" + data.rows[i].first_name + "</td><td>"
-                                    + data.rows[i]['last_name'] + "</td><td>" + data.rows[i]['email'] + "</td></tr>" ;
-                            }
--->
-            
-            
-            </table>
+       
         
         </div>
                 
+
+<script>
+
+let table = "<table>";
+                            table += "<tr><th>Building Name</th>";
+                            table += "<th>Wheelchair</th>";
+                            table += "<th>Washroom</th></tr>";
+            $("#result").html("hello");
+// <!--
+//                             for (let i = 0; i < data.rows.length; i++) {
+//                                 table += "<tr><td>" + data.rows[i].ID + "</td><td>" + data.rows[i].first_name + "</td><td>"
+//                                     + data.rows[i]['last_name'] + "</td><td>" + data.rows[i]['email'] + "</td></tr>" ;
+//                             }
+// -->
+</script>
+
                 <!--
 <fieldset>
 <div class="groupLocationDiv">
